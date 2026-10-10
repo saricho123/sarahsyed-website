@@ -249,28 +249,63 @@ span.highlight {
 
 .hero-band {
   position: relative;
-  background: var(--teal);
+  background: var(--card);
   padding: 2px 0 0 0;
-  overflow: hidden;
 }
 
 .hero-band .name {
-  color: #ffffff;
-}
-
-.hero-band a {
-  color: #f1ede0;
-  background-image: linear-gradient(rgba(241,237,224,0.55), rgba(241,237,224,0.55));
-  background-size: 100% 1px;
-}
-
-.hero-band a:hover {
-  color: var(--sand);
-  background-image: linear-gradient(var(--sand), var(--sand));
+  color: var(--teal);
+  font-size: 30px;
 }
 
 .hero-band p {
-  color: rgba(255,255,255,0.92);
+  color: var(--ink);
+}
+
+.hero-tagline {
+  color: var(--muted);
+  font-size: 14.5px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hero-photo {
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--card);
+  box-shadow: 0 0 0 3px var(--slate);
+  display: block;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.hero-photo:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 0 3px var(--maroon);
+}
+
+.hero-links {
+  margin-top: 18px !important;
+}
+
+.hero-links a {
+  display: inline-block;
+  margin: 4px 8px 4px 0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: var(--sand-soft);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--teal);
+  background-image: none !important;
+}
+
+.hero-links a:hover {
+  background: var(--slate);
+  border-color: var(--slate);
+  color: #fff;
 }
 
 /* Subtle fade-in for the whole page */
