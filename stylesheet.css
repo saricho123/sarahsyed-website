@@ -370,7 +370,7 @@ span.highlight {
 .news {
   max-height: 290px;
   overflow-y: auto;
-  padding: 4px 10px 4px 0;
+  padding: 4px 10px 4px 14px;
 }
 
 .news table {
