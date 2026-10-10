@@ -1,0 +1,358 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+.papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.name {
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+}
+
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+
+.colored-box {
+    color: black;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+/* ---------------------------------------------------------------------------
+   Additions for Sarah Syed's site.
+   Palette:
+     --sand   #CCC9A1  (warm neutral, backgrounds)
+     --teal   #002A32  (deep teal, primary text/accent)
+     --maroon #2E0F15  (deep maroon, secondary accent)
+     --slate  #778DA9  (muted blue, links/accent)
+     --mauve  #91818A  (muted rose-gray, accent)
+   --------------------------------------------------------------------------- */
+
+:root {
+  --sand: #CCC9A1;
+  --teal: #002A32;
+  --maroon: #2E0F15;
+  --slate: #778DA9;
+  --mauve: #91818A;
+}
+
+a {
+  color: #3d6b85;
+}
+
+a:focus,
+a:hover {
+  color: var(--maroon);
+}
+
+.papertitle {
+  color: var(--teal);
+}
+
+h2 {
+  color: var(--teal);
+}
+
+.name {
+  color: var(--teal);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+
+span.highlight {
+  background-color: #e4e2cc;
+}
+
+/* Recent news ------------------------------------------------------------- */
+.news {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 8px;
+  border-left: 3px solid var(--slate);
+  padding-left: 14px;
+}
+
+.news table {
+  border-spacing: 0px 6px;
+  border-collapse: separate;
+}
+
+.news td {
+  vertical-align: top;
+}
+
+.newsdate {
+  color: var(--mauve);
+  white-space: nowrap;
+  padding-right: 12px;
+  font-weight: 700;
+}
+
+.upcoming {
+  background-color: #e4e2cc;
+  border-radius: 3px;
+  padding: 0px 4px;
+  font-weight: 700;
+  color: var(--maroon);
+}
+
+/* Institution logo strip -------------------------------------------------- */
+.logostrip {
+  text-align: center;
+  padding: 22px 0 22px 0;
+}
+
+.logostrip img {
+  height: 46px;
+  margin: 0 18px;
+  vertical-align: middle;
+  opacity: 1;
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.logostrip img:hover {
+  opacity: 0.85;
+  transform: scale(1.04);
+}
+
+.rolelogo {
+  height: 34px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.venue {
+  color: #5c5450;
+}
+
+.status {
+  color: var(--maroon);
+  font-weight: 700;
+}
+
+.colored-box h2 {
+  color: var(--teal);
+}
+
+.methodlabel {
+  font-weight: 700;
+  color: var(--teal);
+}
+
+/* ---------------------------------------------------------------------------
+   Dynamic background + card layout
+   --------------------------------------------------------------------------- */
+
+html {
+  background: #778DA9;
+  min-height: 100%;
+}
+
+body {
+  background: transparent;
+  margin: 0;
+  padding: 24px 0 48px 0;
+}
+
+.page-shell {
+  background: #fdfcf7;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 42, 50, 0.18), 0 2px 8px rgba(46, 15, 21, 0.10);
+  overflow: hidden;
+}
+
+.hero-band {
+  background: #002A32;
+  padding: 2px 0 0 0;
+}
+
+.hero-band .name {
+  color: #ffffff;
+}
+
+.hero-band a {
+  color: #f1ede0;
+  text-decoration: underline;
+  text-decoration-color: rgba(241,237,224,0.5);
+}
+
+.hero-band a:hover {
+  color: #CCC9A1;
+}
+
+.hero-band p {
+  color: rgba(255,255,255,0.92);
+}
+
+.section-tint-a { background: #f0efe3; }
+.section-tint-b { background: #e9edf1; }
+.section-tint-c { background: #ece7e8; }
+.section-tint-d { background: #e9e6e7; }
+
+/* More section card grid ---------------------------------------------------- */
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 4px 16px 20px 16px;
+}
+
+@media (max-width: 600px) {
+  .more-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.more-card {
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 42, 50, 0.12);
+  overflow: hidden;
+  border: 1px solid rgba(0, 42, 50, 0.08);
+}
+
+.more-card-header {
+  padding: 14px 18px;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.more-card-body {
+  padding: 16px 18px 20px 18px;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.more-card-body .methodlabel {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.more-card-body .row + .row {
+  margin-top: 12px;
+}
