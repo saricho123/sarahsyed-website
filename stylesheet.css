@@ -142,31 +142,31 @@ span.highlight {
 }
 /* ---------------------------------------------------------------------------
    Additions for Sarah Syed's site.
-   Base palette (kept, used as accents rather than solid blocks):
-     --sand   #CCC9A1  (warm neutral)
-     --teal   #002A32  (deep teal, primary accent)
-     --maroon #2E0F15  (deep maroon, warm accent)
-     --slate  #778DA9  (muted blue, links/accent)
-     --mauve  #91818A  (muted rose-gray, accent)
-   Derived tones extend the same hues into a lighter, modern UI palette
-   (soft tints + gradients) instead of flat full-width color bands.
+   Palette v2 -- modern navy/indigo + coral/amber, replacing the original
+   muted teal/sand/maroon/slate/mauve set. Variable names are kept so every
+   rule below picks up the new hues automatically.
+     --sand   #F3D9B8  (warm cream, backgrounds)
+     --teal   #121A3F  (deep navy, primary dark accent)
+     --maroon #E8604C  (vivid coral, primary pop accent)
+     --slate  #4C5FD7  (indigo, links/interactive accent)
+     --mauve  #F4B740  (amber, secondary warm accent)
    --------------------------------------------------------------------------- */
 
 :root {
-  --sand: #CCC9A1;
-  --teal: #002A32;
-  --maroon: #2E0F15;
-  --slate: #778DA9;
-  --mauve: #91818A;
+  --sand: #F3D9B8;
+  --teal: #121A3F;
+  --maroon: #E8604C;
+  --slate: #4C5FD7;
+  --mauve: #F4B740;
 
-  --bg: #f3f2ee;
+  --bg: #FAF6EF;
   --card: #ffffff;
-  --ink: #1c2b31;
-  --muted: #74706a;
-  --line: rgba(0, 42, 50, 0.09);
-  --accent-grad: linear-gradient(135deg, var(--teal) 0%, var(--slate) 100%);
+  --ink: #1a1f36;
+  --muted: #767391;
+  --line: rgba(18, 26, 63, 0.09);
+  --accent-grad: linear-gradient(135deg, var(--slate) 0%, var(--teal) 100%);
   --warm-grad: linear-gradient(135deg, var(--maroon) 0%, var(--mauve) 100%);
-  --sand-soft: #f2f0e4;
+  --sand-soft: #FBF1DE;
 }
 
 * { box-sizing: border-box; }
@@ -243,16 +243,16 @@ span.highlight {
 .page-shell {
   background: var(--card);
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 42, 50, 0.14), 0 4px 14px rgba(46, 15, 21, 0.08);
+  box-shadow: 0 20px 60px rgba(18, 26, 63, 0.16), 0 4px 14px rgba(232, 96, 76, 0.08);
   overflow: hidden;
 }
 
 .hero-band {
   position: relative;
   background:
-    radial-gradient(circle at 85% 0%, rgba(119,141,169,0.55) 0%, rgba(119,141,169,0) 45%),
-    radial-gradient(circle at 10% 100%, rgba(204,201,161,0.25) 0%, rgba(204,201,161,0) 40%),
-    linear-gradient(135deg, #001c22 0%, #002A32 55%, #0c3c46 100%);
+    radial-gradient(circle at 85% 0%, rgba(76,95,215,0.55) 0%, rgba(76,95,215,0) 45%),
+    radial-gradient(circle at 15% 105%, rgba(232,96,76,0.35) 0%, rgba(232,96,76,0) 42%),
+    linear-gradient(135deg, #090d22 0%, #121A3F 55%, #202d61 100%);
   padding: 2px 0 0 0;
   overflow: hidden;
 }
@@ -431,7 +431,7 @@ span.highlight {
 .news tr:first-child .newsdate .dw::before {
   background: var(--maroon);
   border-color: var(--maroon);
-  box-shadow: 0 0 0 4px rgba(46,15,21,0.12);
+  box-shadow: 0 0 0 4px rgba(232,96,76,0.18);
 }
 
 .upcoming {
@@ -476,7 +476,7 @@ span.highlight {
 .pub-row:hover {
   background: var(--sand-soft);
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0,42,50,0.08);
+  box-shadow: 0 10px 24px rgba(18,26,63,0.08);
 }
 
 .pub-row img {
@@ -508,7 +508,7 @@ span.highlight {
 .more-card {
   border-radius: 14px;
   background: var(--card);
-  box-shadow: 0 4px 16px rgba(0, 42, 50, 0.08);
+  box-shadow: 0 4px 16px rgba(18, 26, 63, 0.08);
   overflow: hidden;
   border: 1px solid var(--line);
   border-top: 4px solid var(--card-accent, var(--teal));
@@ -517,7 +517,7 @@ span.highlight {
 
 .more-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0, 42, 50, 0.14);
+  box-shadow: 0 14px 30px rgba(18, 26, 63, 0.16);
 }
 
 .more-card-header {
