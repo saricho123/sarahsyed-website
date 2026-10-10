@@ -249,8 +249,16 @@ span.highlight {
 
 .hero-band {
   position: relative;
-  background: var(--card);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(76,95,215,0.10) 0%, rgba(76,95,215,0) 55%),
+    radial-gradient(circle at 0% 100%, rgba(232,96,76,0.08) 0%, rgba(232,96,76,0) 50%),
+    var(--card);
   padding: 2px 0 0 0;
+}
+
+.hero-topbar {
+  height: 5px;
+  background: var(--warm-grad);
 }
 
 .hero-band .name {
@@ -263,9 +271,9 @@ span.highlight {
 }
 
 .hero-tagline {
-  color: var(--muted);
+  color: var(--slate);
   font-size: 14.5px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
 }
 
