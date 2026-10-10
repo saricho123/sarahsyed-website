@@ -249,10 +249,7 @@ span.highlight {
 
 .hero-band {
   position: relative;
-  background:
-    radial-gradient(circle at 85% 0%, rgba(76,95,215,0.55) 0%, rgba(76,95,215,0) 45%),
-    radial-gradient(circle at 15% 105%, rgba(232,96,76,0.35) 0%, rgba(232,96,76,0) 42%),
-    linear-gradient(135deg, #090d22 0%, #121A3F 55%, #202d61 100%);
+  background: var(--teal);
   padding: 2px 0 0 0;
   overflow: hidden;
 }
