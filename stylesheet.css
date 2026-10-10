@@ -384,20 +384,43 @@ span.highlight {
 
 .news td {
   vertical-align: top;
-  position: relative;
-  padding: 10px 0 10px 26px;
+  padding: 10px 0;
+}
+
+.news td.newsdate {
+  padding-left: 22px;
+  padding-right: 16px;
   border-left: 2px solid var(--line);
 }
 
-.news tr:last-child td {
+.news tr:last-child td.newsdate {
   border-left: 2px solid transparent;
 }
 
-.news td::before {
+.newsdate {
+  color: var(--ink);
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* The dot lives on an inline wrapper around just the date text, so its
+   height is the single text line -- not the (possibly taller) table row --
+   which keeps it level with the date regardless of how long the entry is. */
+.newsdate .dw {
+  position: relative;
+  display: inline-block;
+}
+
+.newsdate .dw::before {
   content: "";
   position: absolute;
-  left: -6px;
-  top: 18px;
+  left: -27px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -405,30 +428,10 @@ span.highlight {
   border: 2px solid var(--slate);
 }
 
-.news tr:first-child td::before {
+.news tr:first-child .newsdate .dw::before {
   background: var(--maroon);
   border-color: var(--maroon);
   box-shadow: 0 0 0 4px rgba(46,15,21,0.12);
-}
-
-.news td.newsdate {
-  padding-left: 0;
-  border-left: none;
-}
-
-.news td.newsdate::before {
-  display: none;
-}
-
-.newsdate {
-  color: var(--ink);
-  white-space: nowrap;
-  padding-right: 14px;
-  font-weight: 700;
-  font-size: 12.5px;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  opacity: 0.75;
 }
 
 .upcoming {
