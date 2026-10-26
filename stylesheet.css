@@ -142,48 +142,37 @@ span.highlight {
 }
 /* ---------------------------------------------------------------------------
    Additions for Sarah Syed's site.
-   Palette:
-     --sand   #CCC9A1  (warm neutral, backgrounds)
-     --teal   #002A32  (deep teal, primary text/accent)
-     --maroon #2E0F15  (deep maroon, secondary accent)
-     --slate  #778DA9  (muted blue, links/accent)
-     --mauve  #91818A  (muted rose-gray, accent)
+   Accent colour is #1a11bf, a slightly darkened version of LaTeX BlueViolet
+   (cmyk 0.86 0.91 0 0.04 -> #2216f5), which is the link colour in her CV, so
+   the two documents read as one set.
    --------------------------------------------------------------------------- */
 
-:root {
-  --sand: #CCC9A1;
-  --teal: #002A32;
-  --maroon: #2E0F15;
-  --slate: #778DA9;
-  --mauve: #91818A;
-}
-
 a {
-  color: #3d6b85;
+  color: #1a11bf;
 }
 
 a:focus,
 a:hover {
-  color: var(--maroon);
+  color: #f09228;
 }
 
 .papertitle {
-  color: var(--teal);
+  color: #1a11bf;
 }
 
 h2 {
-  color: var(--teal);
+  color: #1a1a2e;
 }
 
 .name {
-  color: var(--teal);
+  color: #1a1a2e;
   font-weight: 700;
   letter-spacing: -0.5px;
 }
 
 
 span.highlight {
-  background-color: #e4e2cc;
+  background-color: #ebe9fd;
 }
 
 /* Recent news ------------------------------------------------------------- */
@@ -191,7 +180,7 @@ span.highlight {
   max-height: 260px;
   overflow-y: auto;
   padding-right: 8px;
-  border-left: 3px solid var(--slate);
+  border-left: 3px solid #1a11bf;
   padding-left: 14px;
 }
 
@@ -205,37 +194,38 @@ span.highlight {
 }
 
 .newsdate {
-  color: var(--mauve);
+  color: #666;
   white-space: nowrap;
   padding-right: 12px;
   font-weight: 700;
 }
 
 .upcoming {
-  background-color: #e4e2cc;
+  background-color: #ebe9fd;
   border-radius: 3px;
   padding: 0px 4px;
   font-weight: 700;
-  color: var(--maroon);
+  color: #1a11bf;
 }
 
 /* Institution logo strip -------------------------------------------------- */
 .logostrip {
   text-align: center;
-  padding: 22px 0 22px 0;
+  padding: 4px 0 14px 0;
 }
 
 .logostrip img {
   height: 46px;
   margin: 0 18px;
   vertical-align: middle;
-  opacity: 1;
-  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+  filter: grayscale(100%);
+  opacity: 0.68;
+  transition: opacity .2s ease-in-out, filter .2s ease-in-out;
 }
 
 .logostrip img:hover {
-  opacity: 0.85;
-  transform: scale(1.04);
+  filter: grayscale(0%);
+  opacity: 1;
 }
 
 .rolelogo {
@@ -245,114 +235,19 @@ span.highlight {
 }
 
 .venue {
-  color: #5c5450;
+  color: #444;
 }
 
 .status {
-  color: var(--maroon);
+  color: #8a1c1c;
   font-weight: 700;
 }
 
 .colored-box h2 {
-  color: var(--teal);
+  color: #1a1a2e;
 }
 
 .methodlabel {
   font-weight: 700;
-  color: var(--teal);
-}
-
-/* ---------------------------------------------------------------------------
-   Dynamic background + card layout
-   --------------------------------------------------------------------------- */
-
-html {
-  background: #778DA9;
-  min-height: 100%;
-}
-
-body {
-  background: transparent;
-  margin: 0;
-  padding: 24px 0 48px 0;
-}
-
-.page-shell {
-  background: #fdfcf7;
-  border-radius: 18px;
-  box-shadow: 0 10px 40px rgba(0, 42, 50, 0.18), 0 2px 8px rgba(46, 15, 21, 0.10);
-  overflow: hidden;
-}
-
-.hero-band {
-  background: #002A32;
-  padding: 2px 0 0 0;
-}
-
-.hero-band .name {
-  color: #ffffff;
-}
-
-.hero-band a {
-  color: #f1ede0;
-  text-decoration: underline;
-  text-decoration-color: rgba(241,237,224,0.5);
-}
-
-.hero-band a:hover {
-  color: #CCC9A1;
-}
-
-.hero-band p {
-  color: rgba(255,255,255,0.92);
-}
-
-.section-tint-a { background: #f0efe3; }
-.section-tint-b { background: #e9edf1; }
-.section-tint-c { background: #ece7e8; }
-.section-tint-d { background: #e9e6e7; }
-
-/* More section card grid ---------------------------------------------------- */
-.more-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  padding: 4px 16px 20px 16px;
-}
-
-@media (max-width: 600px) {
-  .more-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.more-card {
-  border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 4px 16px rgba(0, 42, 50, 0.12);
-  overflow: hidden;
-  border: 1px solid rgba(0, 42, 50, 0.08);
-}
-
-.more-card-header {
-  padding: 14px 18px;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-.more-card-body {
-  padding: 16px 18px 20px 18px;
-  font-size: 13.5px;
-  line-height: 1.5;
-}
-
-.more-card-body .methodlabel {
-  display: block;
-  margin-bottom: 2px;
-}
-
-.more-card-body .row + .row {
-  margin-top: 12px;
+  color: #1a1a2e;
 }
