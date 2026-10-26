@@ -142,238 +142,100 @@ span.highlight {
 }
 /* ---------------------------------------------------------------------------
    Additions for Sarah Syed's site.
-   Palette v2 -- modern navy/indigo + coral/amber, replacing the original
-   muted teal/sand/maroon/slate/mauve set. Variable names are kept so every
-   rule below picks up the new hues automatically.
-     --sand   #F3D9B8  (warm cream, backgrounds)
-     --teal   #121A3F  (deep navy, primary dark accent)
-     --maroon #E8604C  (vivid coral, primary pop accent)
-     --slate  #4C5FD7  (indigo, links/interactive accent)
-     --mauve  #F4B740  (amber, secondary warm accent)
+   Palette:
+     --sand   #CCC9A1  (warm neutral, backgrounds)
+     --teal   #002A32  (deep teal, primary text/accent)
+     --maroon #2E0F15  (deep maroon, secondary accent)
+     --slate  #778DA9  (muted blue, links/accent)
+     --mauve  #91818A  (muted rose-gray, accent)
    --------------------------------------------------------------------------- */
 
 :root {
-  --sand: #F3D9B8;
-  --teal: #121A3F;
-  --maroon: #E8604C;
-  --slate: #4C5FD7;
-  --mauve: #F4B740;
-
-  --bg: #FAF6EF;
-  --card: #ffffff;
-  --ink: #1a1f36;
-  --muted: #767391;
-  --line: rgba(18, 26, 63, 0.09);
-  --accent-grad: linear-gradient(135deg, var(--slate) 0%, var(--teal) 100%);
-  --warm-grad: linear-gradient(135deg, var(--maroon) 0%, var(--mauve) 100%);
-  --sand-soft: #FBF1DE;
-}
-
-* { box-sizing: border-box; }
-
-html {
-  background: var(--bg);
-  min-height: 100%;
-}
-
-body {
-  background: transparent;
-  margin: 0;
-  padding: 32px 0 56px 0;
+  --sand: #CCC9A1;
+  --teal: #002A32;
+  --maroon: #2E0F15;
+  --slate: #778DA9;
+  --mauve: #91818A;
 }
 
 a {
-  color: var(--slate);
-  text-decoration: none;
-  background-image: linear-gradient(var(--slate), var(--slate));
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-  background-size: 0% 1.5px;
-  transition: background-size .25s ease, color .2s ease;
+  color: #3d6b85;
 }
 
 a:focus,
 a:hover {
   color: var(--maroon);
-  background-image: linear-gradient(var(--maroon), var(--maroon));
-  background-size: 100% 1.5px;
 }
 
 .papertitle {
   color: var(--teal);
-  background-image: none;
 }
 
 h2 {
-  color: var(--ink);
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 12px;
-  margin-bottom: 6px;
-}
-
-h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 46px;
-  height: 4px;
-  border-radius: 4px;
-  background: var(--accent-grad);
+  color: var(--teal);
 }
 
 .name {
   color: var(--teal);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.5px;
 }
 
+
 span.highlight {
-  background: linear-gradient(180deg, transparent 60%, var(--sand-soft) 60%);
-  padding: 0 1px;
+  background-color: #e4e2cc;
 }
 
-/* ---------------------------------------------------------------------------
-   Page shell + hero
-   --------------------------------------------------------------------------- */
-
-.page-shell {
-  background: var(--card);
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(18, 26, 63, 0.16), 0 4px 14px rgba(232, 96, 76, 0.08);
-  overflow: hidden;
+/* Recent news ------------------------------------------------------------- */
+.news {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 8px;
+  border-left: 3px solid var(--slate);
+  padding-left: 14px;
 }
 
-.hero-band {
-  position: relative;
-  background:
-    radial-gradient(circle at 100% 0%, rgba(76,95,215,0.10) 0%, rgba(76,95,215,0) 55%),
-    radial-gradient(circle at 0% 100%, rgba(232,96,76,0.08) 0%, rgba(232,96,76,0) 50%),
-    var(--card);
-  padding: 2px 0 0 0;
+.news table {
+  border-spacing: 0px 6px;
+  border-collapse: separate;
 }
 
-.hero-topbar {
-  height: 5px;
-  background: var(--warm-grad);
+.news td {
+  vertical-align: top;
 }
 
-.hero-band .name {
-  color: var(--teal);
-  font-size: 30px;
-}
-
-.hero-band p {
-  color: var(--ink);
-}
-
-.hero-tagline {
-  color: var(--slate);
-  font-size: 14.5px;
+.newsdate {
+  color: var(--mauve);
+  white-space: nowrap;
+  padding-right: 12px;
   font-weight: 700;
-  margin: 0;
 }
 
-.hero-photo {
-  width: 92px;
-  height: 92px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid var(--card);
-  box-shadow: 0 0 0 3px var(--slate);
-  display: block;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.hero-photo:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 0 3px var(--maroon);
-}
-
-.hero-links {
-  margin-top: 18px !important;
-}
-
-.hero-links a {
-  display: inline-block;
-  margin: 4px 8px 4px 0;
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid var(--line);
-  background: var(--sand-soft);
+.upcoming {
+  background-color: #e4e2cc;
+  border-radius: 3px;
+  padding: 0px 4px;
   font-weight: 700;
-  font-size: 13px;
-  color: var(--teal);
-  background-image: none !important;
+  color: var(--maroon);
 }
 
-.hero-links a:hover {
-  background: var(--slate);
-  border-color: var(--slate);
-  color: #fff;
-}
-
-/* Subtle fade-in for the whole page */
-@keyframes riseIn {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-}
-
-.reveal.is-visible {
-  animation: riseIn .6s ease forwards;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; animation: none; }
-}
-
-/* ---------------------------------------------------------------------------
-   Institution logo strip -- its own breathing-room section
-   --------------------------------------------------------------------------- */
-
-.logostrip-wrap {
-  background: var(--sand-soft);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 30px 16px 34px 16px;
-  text-align: center;
-}
-
-.logostrip-label {
-  display: block;
-  font-size: 11px;
-  letter-spacing: 2.2px;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-
+/* Institution logo strip -------------------------------------------------- */
 .logostrip {
   text-align: center;
+  padding: 22px 0 22px 0;
 }
 
 .logostrip img {
-  height: 50px;
-  margin: 10px 26px;
+  height: 46px;
+  margin: 0 18px;
   vertical-align: middle;
-  opacity: 0.88;
-  filter: grayscale(10%);
-  transition: opacity .25s ease, transform .25s ease, filter .25s ease;
+  opacity: 1;
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
 }
 
 .logostrip img:hover {
-  opacity: 1;
-  filter: grayscale(0%);
-  transform: scale(1.08) translateY(-2px);
+  opacity: 0.85;
+  transform: scale(1.04);
 }
 
 .rolelogo {
@@ -383,7 +245,16 @@ span.highlight {
 }
 
 .venue {
-  color: var(--muted);
+  color: #5c5450;
+}
+
+.status {
+  color: var(--maroon);
+  font-weight: 700;
+}
+
+.colored-box h2 {
+  color: var(--teal);
 }
 
 .methodlabel {
@@ -392,150 +263,60 @@ span.highlight {
 }
 
 /* ---------------------------------------------------------------------------
-   Section rhythm -- replace flat color blocks with whitespace + hairlines
+   Dynamic background + card layout
    --------------------------------------------------------------------------- */
 
-.section-tint-a, .section-tint-b, .section-tint-c, .section-tint-d {
-  background: var(--card);
+html {
+  background: #778DA9;
+  min-height: 100%;
 }
 
-.section {
-  border-top: 1px solid var(--line);
+body {
+  background: transparent;
+  margin: 0;
+  padding: 24px 0 48px 0;
 }
 
-/* ---------------------------------------------------------------------------
-   Recent news -- vertical timeline
-   --------------------------------------------------------------------------- */
-
-.news {
-  max-height: 290px;
-  overflow-y: auto;
-  padding: 4px 10px 4px 14px;
+.page-shell {
+  background: #fdfcf7;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 42, 50, 0.18), 0 2px 8px rgba(46, 15, 21, 0.10);
+  overflow: hidden;
 }
 
-.news table {
-  border-spacing: 0px;
-  border-collapse: separate;
+.hero-band {
+  background: #002A32;
+  padding: 2px 0 0 0;
 }
 
-.news tr {
-  position: relative;
+.hero-band .name {
+  color: #ffffff;
 }
 
-.news td {
-  vertical-align: top;
-  padding: 10px 0;
+.hero-band a {
+  color: #f1ede0;
+  text-decoration: underline;
+  text-decoration-color: rgba(241,237,224,0.5);
 }
 
-.news td.newsdate {
-  padding-left: 22px;
-  padding-right: 16px;
-  border-left: 2px solid var(--line);
+.hero-band a:hover {
+  color: #CCC9A1;
 }
 
-.news tr:last-child td.newsdate {
-  border-left: 2px solid transparent;
+.hero-band p {
+  color: rgba(255,255,255,0.92);
 }
 
-.newsdate {
-  color: var(--ink);
-  white-space: nowrap;
-  font-weight: 700;
-  font-size: 12.5px;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  opacity: 0.75;
-}
+.section-tint-a { background: #f0efe3; }
+.section-tint-b { background: #e9edf1; }
+.section-tint-c { background: #ece7e8; }
+.section-tint-d { background: #e9e6e7; }
 
-/* The dot lives on an inline wrapper around just the date text, so its
-   height is the single text line -- not the (possibly taller) table row --
-   which keeps it level with the date regardless of how long the entry is. */
-.newsdate .dw {
-  position: relative;
-  display: inline-block;
-}
-
-.newsdate .dw::before {
-  content: "";
-  position: absolute;
-  left: -27px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--card);
-  border: 2px solid var(--slate);
-}
-
-.news tr:first-child .newsdate .dw::before {
-  background: var(--maroon);
-  border-color: var(--maroon);
-  box-shadow: 0 0 0 4px rgba(232,96,76,0.18);
-}
-
-.upcoming {
-  background: var(--warm-grad);
-  border-radius: 20px;
-  padding: 2px 10px;
-  font-weight: 700;
-  color: #fff;
-  font-size: 11.5px;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-}
-
-/* ---------------------------------------------------------------------------
-   Status badges (pill chips, swapped in for the old bgcolor rows)
-   --------------------------------------------------------------------------- */
-
-.badge {
-  display: inline-block;
-  padding: 3px 11px;
-  border-radius: 20px;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.badge-review   { background: var(--slate); }
-.badge-rr       { background: var(--warm-grad); }
-.badge-preprint { background: var(--teal); }
-.badge-prep     { background: var(--mauve); }
-
-.status { font-weight: 700; }
-
-/* Row-level card treatment for publication / presentation entries -------- */
-.pub-row {
-  border-radius: 14px;
-  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
-}
-
-.pub-row:hover {
-  background: var(--sand-soft);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(18,26,63,0.08);
-}
-
-.pub-row img {
-  border-radius: 10px;
-  transition: transform .25s ease;
-}
-
-.pub-row:hover img {
-  transform: scale(1.03);
-}
-
-/* ---------------------------------------------------------------------------
-   More section -- card grid with accent bar instead of solid header block
-   --------------------------------------------------------------------------- */
-
+/* More section card grid ---------------------------------------------------- */
 .more-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 18px;
   padding: 4px 16px 20px 16px;
 }
 
@@ -547,30 +328,22 @@ span.highlight {
 
 .more-card {
   border-radius: 14px;
-  background: var(--card);
-  box-shadow: 0 4px 16px rgba(18, 26, 63, 0.08);
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 42, 50, 0.12);
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-top: 4px solid var(--card-accent, var(--teal));
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.more-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(18, 26, 63, 0.16);
+  border: 1px solid rgba(0, 42, 50, 0.08);
 }
 
 .more-card-header {
-  padding: 16px 18px 10px 18px;
+  padding: 14px 18px;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 17px;
-  font-weight: 800;
-  color: var(--ink);
-  background: transparent;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .more-card-body {
-  padding: 4px 18px 22px 18px;
+  padding: 16px 18px 20px 18px;
   font-size: 13.5px;
   line-height: 1.5;
 }
