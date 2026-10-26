@@ -251,3 +251,49 @@ span.highlight {
   font-weight: 700;
   color: #1a1a2e;
 }
+
+/* More section card grid ---------------------------------------------------- */
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 4px 16px 20px 16px;
+}
+
+@media (max-width: 600px) {
+  .more-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.more-card {
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 6px solid var(--card-accent, #cfc9f7);
+}
+
+.more-card-header {
+  padding: 14px 18px 8px 18px;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.more-card-body {
+  padding: 4px 18px 20px 18px;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.more-card-body .methodlabel {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.more-card-body .row + .row {
+  margin-top: 12px;
+}
